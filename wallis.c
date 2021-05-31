@@ -23,4 +23,12 @@ int main(void) {
     }
   }
 }
-
+float wallis_pi(int x):
+{
+  int k=1,l=1;
+  int p;
+  while(k<x)
+  {
+    p=2*((4*k*k)/(4*k*k-1))
+      l*=p;
+  }
