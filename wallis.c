@@ -7,7 +7,6 @@ float wallis_pi(int);
 
 int main(void) {
   float pi;
-  float PI=3.14;
   for (int i=0; i<5; i++) {
     pi = wallis_pi(i);
     if (!(fabs(pi - M_PI) > 0.15)) {
@@ -26,10 +25,10 @@ int main(void) {
 }
 float wallis_pi(int x)
 {
- float pi=2.0;
-  int i,j;
+ float pi=1.0;
   for(int i=1;i<=x;i++){
-    pi=(pi*4.0*i*i)/(4.0*i*i-1);  
+    pi=pi*(4.0*i*i)/((4.0*i*i)-1);  
   }
+  pi=2*pi;
   return pi;
 }
